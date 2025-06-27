@@ -6,7 +6,7 @@ const tokensInvalidos = new Set();
 // Invalida o token atual
 function invalidarToken(token) {
   tokensInvalidos.add(token);
-  console.log(`🔒 Token invalidado: ${token}`);
+  console.log(` Token invalidado: ${token}`);
 }
 
 // Verifica se o token está inválido
@@ -16,7 +16,7 @@ function tokenEstaInvalido(token) {
 
 // Utilitário opcional para expirar tokens antigos, caso use redis etc.
 function invalidateExpiredTokens() {
-  console.log('🕓 Verificação programada de tokens expirados (placeholder)');
+  console.log(' Verificação programada de tokens expirados (placeholder)');
 }
 
 module.exports = {

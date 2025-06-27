@@ -1,6 +1,6 @@
 const produtosService = require('../services/produtosService');
 
-// 📌 Buscar todos os produtos
+//  Buscar todos os produtos
 async function getProdutos(req, res) {
     try {
         const produtos = await produtosService.getProdutos(); // Chama o serviço para buscar os produtos
@@ -15,7 +15,7 @@ async function getProdutos(req, res) {
     }
 }
 
-// 📌 Buscar um produto por ID
+//  Buscar um produto por ID
 async function getProdutoById(req, res) {
     const { id } = req.params;
     try {
@@ -31,7 +31,7 @@ async function getProdutoById(req, res) {
     }
 }
 
-// 📌 Adicionar um novo produto
+//  Adicionar um novo produto
 async function addProduto(req, res) {
     const { nome, descricao, preco, quantidade } = req.body;
     if (!nome || !descricao || !preco || !quantidade) {
@@ -57,7 +57,7 @@ async function addProduto(req, res) {
     }
 }
 
-// 📌 Atualizar um produto
+//  Atualizar um produto
 async function updateProduto(req, res) {
     const { id } = req.params;
     const { nome, descricao, preco, quantidade } = req.body;
@@ -86,7 +86,7 @@ async function updateProduto(req, res) {
     }
 }
 
-// 📌 Deletar um produto
+//  Deletar um produto
 async function deleteProduto(req, res) {
     const { id } = req.params;
     try {

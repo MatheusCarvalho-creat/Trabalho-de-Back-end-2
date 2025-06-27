@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../app'); // ajuste o caminho conforme sua estrutura
 
-describe('✅ Testes de validação de campos', () => {
+describe(' Testes de validação de campos', () => {
   it('deve falhar se o nome for muito curto', async () => {
     const res = await request(app).post('/clientes').send({
       nome: 'Jo',

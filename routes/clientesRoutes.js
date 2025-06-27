@@ -12,7 +12,7 @@ const {
 // Importa o middleware de cache
 const { cacheMiddleware } = require('../middlewares/cache');
 
-// ✅ Rota GET com cache ativado
+// Rota GET com cache ativado
 router.get('/', cacheMiddleware, getClientes);
 
 // Outras rotas sem cache (POST, PUT, DELETE)

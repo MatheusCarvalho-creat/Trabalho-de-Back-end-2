@@ -16,7 +16,7 @@ beforeAll(async () => {
   expect(typeof token).toBe('string');
 });
 
-describe('🔒 Testes de autenticação /clientes', () => {
+describe(' Testes de autenticação /clientes', () => {
   it('deve retornar 401 sem token', async () => {
     const res = await request(app).get('/clientes');
     expect(res.statusCode).toBe(401);

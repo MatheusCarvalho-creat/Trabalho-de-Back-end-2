@@ -46,7 +46,7 @@ async function addCliente(req, res) {
             idade,
         });
 
-        invalidateClientesCache(); // ✅ Invalida o cache após criação
+        invalidateClientesCache(); 
         res.status(200).json({ message: 'Cliente cadastrado com sucesso!', id });
     } catch (error) {
         console.error('Erro ao cadastrar cliente:', error);

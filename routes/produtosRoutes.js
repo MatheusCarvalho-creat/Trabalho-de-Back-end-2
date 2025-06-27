@@ -3,7 +3,7 @@ const produtosService = require('../services/produtosService'); // Importando o 
 
 const router = express.Router();
 
-// 📌 Listar todos os produtos
+//  Listar todos os produtos
 router.get('/', async (req, res) => {
     try {
         const produtos = await produtosService.getProdutos(); // Chama o serviço para buscar os produtos
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// 📌 Buscar produto por ID
+//  Buscar produto por ID
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// 📌 Adicionar um novo produto
+//  Adicionar um novo produto
 router.post('/', async (req, res) => {
     const { nome, descricao, preco, quantidade } = req.body;
     if (!nome || !descricao || !preco || !quantidade) {
@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// 📌 Atualizar um produto pelo ID
+//  Atualizar um produto pelo ID
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { nome, descricao, preco, quantidade } = req.body;
@@ -89,7 +89,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// 📌 Deletar um produto pelo ID
+//  Deletar um produto pelo ID
 router.delete('/:id', async (req, res) => {
     const { id } = req.params;
     try {
